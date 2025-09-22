@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #131111;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1bce11;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .payment-card {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-card img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .payment-card h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .payment-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        /* Estilos específicos para cada método */
+        .transferencia {
+            background-color: #e8f5e9;
+        }
+
+        .tarjeta {
+            background-color: #e3f2fd;
+        }
+
+        .mercado-pago {
+            background-color: #fff3e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Métodos de Pago</h1>
+        <div class="payment-methods">
+            
+            <!-- Transferencia Bancaria -->
+            <div class="payment-card transferencia">
+                <img src="https://img.icons8.com/ios-filled/50/4caf50/bank.png" alt="Transferencia Bancaria">
+                <div>
+                    <h3>Transferencia Bancaria</h3>
+                    <p>Paga mediante una transferencia desde tu banco. Proceso seguro y confiable.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Crédito/Débito -->
+            <div class="payment-card tarjeta">
+                <img src="{% static 'images/credit-card.png' %}" alt="Tarjeta de Crédito/Débito">
+                <div>
+                    <h3>Tarjeta de Crédito/Débito</h3>
+                    <p>Aceptamos todas las tarjetas de crédito y débito de bancos nacionales e internacionales.</p>
+                </div>
+            </div>
+
+            <!-- Mercado Pago -->
+            <div class="payment-card mercado-pago">
+                <img src="{% static 'images/mp.png' %}" alt="Mercado Pago">
+                <div>
+                    <h3>Mercado Pago</h3>
+                    <p>Paga fácilmente usando tu cuenta de Mercado Pago.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

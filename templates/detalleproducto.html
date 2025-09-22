@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Vanguard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #131111;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            color: #fff;
+        }
+        h1 {
+            color: #1bce11;
+        }
+        .product {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .product-image {
+            flex: 0 0 300px;
+            margin-right: 20px;
+        }
+        .product-image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product-info {
+            flex: 1;
+        }
+        .rating {
+            color: #ffd700;
+            font-size: 24px;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+        .vendedores {
+            margin-top: 20px;
+        }
+        .vendedor-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #1c1c1c;
+            border-radius: 4px;
+        }
+        .vendedor-item p {
+            margin: 0;
+        }
+        .button-comprar {
+            background-color: #1bce11;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .button-comprar:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EA SPORTS FC 25 (PC)</h1>
+        <div class="product">
+            <div class="product-image">
+                <img src="{% static 'images/fifa.jpg' %}" alt="EA SPORTS FC 25">
+            </div>
+            <div class="product-info">
+                <div class="rating">★★★★★ <span>5</span></div>
+                <p>2 reseñas</p>
+                <div class="details">
+                    <p><strong>Plataforma:</strong> Steam</p>
+                    <p><strong>Puede activarse en:</strong> Argentina</p>
+                    <p><strong>Tipo:</strong> Cuenta</p>
+                    <p><strong>Versiones:</strong> GLOBAL</p>
+                </div>
+                
+                <div class="vendedores">
+                    <h3>Vendedores</h3>
+                    <div class="vendedor-item">
+                        <p><strong>Sunny_games</strong> - $50,000</p>
+                        <a href="{% url 'pago' %}" class="button-comprar">Comprar</a>
+                        
+                        
+                    </div>
+                    <div class="vendedor-item">
+                        <p><strong>GameMaster</strong> - $52,000</p>
+                        <a href="{% url 'pago' %}" class="button-comprar">Comprar</a>
+                    </div>
+                    <div class="vendedor-item">
+                        <p><strong>DigitalDreams</strong> - $49,500</p>
+                        <a href="{% url 'pago' %}" class="button-comprar">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
